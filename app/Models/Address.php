@@ -10,7 +10,7 @@ class Address extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'order_id', 'first_name', 'last_name', 'street_address', 'city', 'state', 'country', 'zip_code', 'phone'];
+    protected $fillable = ['order_id', 'first_name', 'last_name', 'street_address', 'city', 'state', 'country', 'zip_code', 'phone'];
 
     public function order(): BelongsTo
     {
