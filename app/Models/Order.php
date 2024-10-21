@@ -12,7 +12,7 @@ class Order extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'status', 'currency', 'shipping_amount', 'shipping_method', 'notes'];
+    protected $fillable = ['user_id', 'grand_total', 'payment_method', 'payment_status', 'status', 'currency', 'shipping_amount', 'shipping_method', 'notes'];
 
     public function user(): BelongsTo
     {
@@ -28,4 +28,6 @@ class Order extends Model
     {
         return $this->hasOne(Address::class);
     }
+
+    
 }
